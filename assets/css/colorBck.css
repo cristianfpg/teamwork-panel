@@ -1,0 +1,425 @@
+@font-face {
+  font-family: 'axiforma_black';
+  src: url('../fonts/axiforma_black-webfont.woff2') format('woff2'), url('../fonts/axiforma_black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'axiforma_book';
+  src: url('../fonts/axiforma_book-webfont.woff2') format('woff2'),
+       url('../fonts/axiforma_book-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_light';
+  src: url('../fonts/proxima_nova_light-webfont.woff2') format('woff2'), url('../fonts/proxima_nova_light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_regular';
+  src: url('../fonts/proxima_nova_regular-webfont.woff2') format('woff2'),
+       url('../fonts/proxima_nova_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_bold';
+  src: url('../fonts/proxima_nova_bold-webfont.woff2') format('woff2'),
+       url('../fonts/proxima_nova_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  box-sizing: border-box;
+}
+* p, * span{
+  font-family: "proxima_nova_regular";
+  color: #444;
+}
+
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body{
+  margin: 0;
+  padding: 50px;
+}
+.btn-menu{
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  text-align: right;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 2;
+  font-family: 'proxima_nova_bold';
+}
+.desplegable{
+  position: fixed;
+  padding-top: 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 35px;
+  background-color: white;
+  /* box-shadow: 0 0 15px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+  text-align: center;
+}
+.desplegable > *{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.desplegable .convenciones{
+  padding: 5px 6px 6px;
+  border-radius: 7px;
+  border: 1px solid #eee;
+  position: relative;
+}
+.desplegable .convenciones .label{
+  position: absolute;
+  top: -14px;
+  left: 4;
+  color: #969696;
+}
+.desplegable .convenciones > *{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  position: relative;
+}
+
+.desplegable .convenciones .active:after{
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #00adff;
+  position: absolute;
+  left: 18px;
+  bottom: -2px;
+}
+
+.desplegable .convenciones .active .marca{
+  border: 2px solid #00adff;
+}
+
+.desplegable .convenciones .marca{
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #9c9c9c;
+}
+
+.desplegable .convenciones span{
+  padding-left: 3px;
+  top: 1px;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+}
+.desplegable .convenciones .nombre{
+  background-color: white;
+  padding: 3px 5px 0;
+  border-radius: 3px;
+  pointer-events: none;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  border: 1px solid #9c9c9c;
+  z-index: 1;
+  opacity: 0;
+  transition: all ease-in-out 0.2s;
+  opacity: 0;
+  white-space: nowrap;
+}
+.desplegable .convenciones > *:hover .nombre{
+  opacity: 1;
+}
+.desplegable .convenciones > *:hover *:not(.nombre){
+  opacity: 0.2;
+}
+.desplegable .btn{
+  margin-left: 30px;
+  padding: 5px 20px;
+  color: white;
+  font-family: 'proxima_nova_bold';
+  text-decoration: none;
+}
+.desplegable .btn.cambiar-semana{
+  background-color: #088bca;
+}
+.desplegable .btn.actualizar{
+  color: #00adff;
+}
+h1.titulo{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'axiforma_book';
+  display: block;
+  margin-top: 40px;
+}
+
+#trafico{
+  position: relative;
+  margin-top: 167px;
+}
+
+#trafico .column{
+  display: inline-block;
+  vertical-align: top;
+  width: calc(11% - 3px);
+}
+
+#trafico .column.content{
+  width: calc(89% - 2px);
+  border-top: 1px solid #9c9c9c;
+}
+
+#trafico > .row.title{
+  position: fixed;
+  width: calc(100% - 100px);
+  left: 50px;
+  top: 186px;
+  background-color: white;
+  z-index: 1;
+  border-bottom: 1px solid #9c9c9c;
+}
+#trafico .row.title-content .column{
+  width: calc(13% - 13px);
+}
+
+#trafico .column.title-text{
+  font-family: "proxima_nova_bold";
+  line-height: 1;
+  padding: 5px;
+}
+
+#trafico .column.title-text.task-list span{
+  font-family: "proxima_nova_light";
+  font-size: 14px;
+}
+#trafico .row.title .column{
+  padding: 5px;
+  text-decoration: none;
+}
+
+#trafico .row.title .column:last-child{
+  background-color: #eee;
+  transition: all ease-in-out 0.2s;
+}
+
+#trafico .row.title .column:last-child:hover{
+  background-color: #909090;
+}
+
+#trafico .row.title .column:last-child:hover span{
+  color: white;
+}
+#trafico .row.title .column.day-label span{
+  color: #2b6bce;
+}
+#trafico .row.title .column span{
+  text-align: center;
+  font-family: "axiforma_book";
+  color: #ABABAD;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+#trafico .row.title .column.today{
+  background-color: #00adff;
+}
+
+#trafico .row.title .column.today span{
+  color: white;
+}
+
+#trafico .row .column.account{
+  border-top: 1px solid #9c9c9c;
+  padding: 5px;
+}
+#trafico .row .column.account span{
+  font-family: 'proxima_nova_bold';
+  color: #828284;
+}
+
+#trafico .row.title-content .column.week{
+  width: calc(87.8% - 5px);
+}
+
+#trafico .row.title-content .column.week > .row:not(:first-child){
+  border-top: 1px solid #9c9c9c;
+}
+#trafico .week-content:not(:first-child) > .title-text{
+  border-top: 1px solid #9c9c9c;
+}
+#trafico .week-content:not(:first-child) > .week{
+  border-top: 1px solid #9c9c9c;
+}
+#trafico .row.title-content .column.day{
+  width: calc(14.3% - 4px);
+}
+#trafico .row.task:not(:last-child){
+  border-bottom: 2px solid white;
+}
+#trafico .row.task span{
+  font-size: 13px;
+  line-height: 1;
+  display: block;
+  padding: 7px 7px 2px;
+  opacity: 0.7;
+}
+#trafico .row.task{
+  display: block;
+  text-decoration: none;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  height: 50px;
+}
+
+#trafico .row.task.dia-entrega .bg{
+  opacity: 1;
+}
+
+#trafico .row.task.dia-entrega span,
+#trafico .row.task.atrasada span{
+  opacity: 1;
+}
+
+#trafico .row.task.atrasada{
+  border-color: tomato;
+  border-width: 2px;
+}
+
+#trafico .row.task.atrasada span{
+  color: #bb1010;
+}
+
+#trafico .row.task .bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all ease-in-out 0.2s;
+  opacity: 0.3;
+}
+/* #trafico .row.task:hover .bg{
+  opacity: 1;
+} */
+#trafico .row.task.vacio{
+  border: none;
+}
+
+.sin-resultados{
+  height: calc(100vh - 250px);
+  padding: 65px;
+}
+
+.sin-resultados .icono{
+  height: 50%;
+  opacity: 0.3;
+  margin: 0 auto;
+  display: block;
+}
+.sin-resultados .copy{
+  margin: 20px auto;
+  text-align: center;
+  color: #9e9b9b;
+  font-size: 17px;
+}
+.sin-resultados .copy a{
+  color: #9e9b9b;
+  font-family: "proxima_nova_bold"; 
+}
+.bg-pauta{
+  background-color: #f69679;
+}
+.border-pauta{
+  border-color: #f69679;
+}
+
+.bg-diseno{
+  background-color: #c4df9b;
+}
+.border-diseno{
+  border-color: #c4df9b;
+}
+
+.bg-copys{
+  background-color: #fdc689;
+}
+.border-copys{
+  border-color: #fdc689;
+}
+
+.bg-desarrollo{
+  background-color: #c7c7c7;
+}
+.border-desarrollo{
+  border-color: #c7c7c7;
+}
+
+.bg-automatizacion{
+  background-color: #7accc8
+}
+.border-automatizacion{
+  border-color: #7accc8;
+}
+
+.bg-contact{
+  background-color: #918cbe;
+}
+.border-contact{
+  border-color: #918cbe;
+}
+
+.bg-capacitacion{
+  background-color: #f49ac1;
+}
+.border-capacitacion{
+  border-color: #f49ac1;
+}
+
+.bg-dayanna{
+  background-color: #89fdd2;
+}
+
+.bg-anny{
+  background-color: black;
+}
+
+.bg-ela{
+  background-color: #f49ac1;
+}
+
+@media screen and (max-width: 1200px){
+  #trafico .row.task span{
+    font-size: 10px;
+  }
+  #trafico .row .column.account span,
+  #trafico .column.title-text.task-list span,
+  #trafico .row.title-content .column span{
+    font-size: 11px;
+  }
+}

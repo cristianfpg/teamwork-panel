@@ -1,0 +1,439 @@
+body {
+  margin: 0; }
+  body * {
+    position: relative;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+    body *:focus {
+      outline: 0; }
+  body a {
+    border: 0;
+    text-decoration: none; }
+  body input, body select {
+    border: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px; }
+  body button {
+    border: 0;
+    background: none;
+    cursor: pointer; }
+  body p, body span, body h1, body h2, body h3, body h4, body h5, body h6 {
+    margin: 0;
+    color: #444;
+    font-family: "proxima_nova_regular"; }
+  body ul {
+    padding: 0;
+    margin: 0; }
+    body ul li {
+      list-style-type: none; }
+  body img {
+    max-width: 100%; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@font-face {
+  font-family: "axiforma_black";
+  src: url("../fonts/axiforma_black-webfont.woff2") format("woff2"), url("../fonts/axiforma_black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "axiforma_book";
+  src: url("../fonts/axiforma_book-webfont.woff2") format("woff2"), url("../fonts/axiforma_book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "proxima_nova_light";
+  src: url("../fonts/proxima_nova_light-webfont.woff2") format("woff2"), url("../fonts/proxima_nova_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "proxima_nova_regular";
+  src: url("../fonts/proxima_nova_regular-webfont.woff2") format("woff2"), url("../fonts/proxima_nova_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "proxima_nova_bold";
+  src: url("../fonts/proxima_nova_bold-webfont.woff2") format("woff2"), url("../fonts/proxima_nova_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.btn-menu {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  text-align: right;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 2;
+  font-family: "proxima_nova_bold"; }
+
+.bg-pauta {
+  background-color: #f69679; }
+
+.border-pauta {
+  border-color: #f69679; }
+
+.bg-diseno {
+  background-color: #c4df9b; }
+
+.border-diseno {
+  border-color: #c4df9b; }
+
+.bg-copys {
+  background-color: #fdc689; }
+
+.border-copys {
+  border-color: #fdc689; }
+
+.bg-desarrollo {
+  background-color: #c7c7c7; }
+
+.border-desarrollo {
+  border-color: #c7c7c7; }
+
+.bg-automatizacion {
+  background-color: #7accc8; }
+
+.border-automatizacion {
+  border-color: #7accc8; }
+
+.bg-contact {
+  background-color: #918cbe; }
+
+.border-contact {
+  border-color: #918cbe; }
+
+.bg-capacitacion {
+  background-color: #f49ac1; }
+
+.border-capacitacion {
+  border-color: #f49ac1; }
+
+.bg-dayanna {
+  background-color: #89fdd2; }
+
+.bg-anny {
+  background-color: black; }
+
+.bg-ela {
+  background-color: #f49ac1; }
+
+.desplegable {
+  position: fixed;
+  padding-top: 53px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 35px;
+  background-color: white;
+  z-index: 1;
+  text-align: center; }
+  .desplegable > * {
+    display: inline-block;
+    vertical-align: middle; }
+  .desplegable .convenciones {
+    padding: 5px 6px 6px;
+    border-radius: 7px;
+    border: 1px solid #eee;
+    position: relative; }
+    .desplegable .convenciones .label {
+      position: absolute;
+      top: -14px;
+      left: 4;
+      color: #969696; }
+    .desplegable .convenciones > * {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 10px;
+      margin-left: 5px;
+      text-decoration: none;
+      position: relative; }
+      .desplegable .convenciones > *:hover {
+        opacity: 0.2; }
+        .desplegable .convenciones > *:hover .nombre {
+          opacity: 1; }
+    .desplegable .convenciones .active:after {
+      content: "";
+      width: 15px;
+      height: 2px;
+      background-color: #00adff;
+      position: absolute;
+      left: 18px;
+      bottom: -2px; }
+    .desplegable .convenciones .active .marca {
+      border: 2px solid #00adff; }
+    .desplegable .convenciones .marca {
+      display: inline-block;
+      vertical-align: middle;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid #9c9c9c; }
+    .desplegable .convenciones span {
+      padding-left: 3px;
+      top: 1px;
+      position: relative;
+      transition: all ease-in-out 0.2s; }
+    .desplegable .convenciones .nombre {
+      background-color: white;
+      padding: 3px 5px 0;
+      border-radius: 3px;
+      pointer-events: none;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      border: 1px solid #9c9c9c;
+      z-index: 1;
+      opacity: 0;
+      transition: all ease-in-out 0.2s;
+      opacity: 0;
+      white-space: nowrap; }
+
+.desplegable .btn {
+  margin-left: 30px;
+  padding: 5px 20px;
+  color: white;
+  font-family: "proxima_nova_bold";
+  text-decoration: none; }
+
+.desplegable .btn.cambiar-semana {
+  background-color: #088bca; }
+
+.desplegable .btn.actualizar {
+  color: #00adff; }
+
+.titulo {
+  text-align: center;
+  font-size: 20px;
+  font-family: "axiforma_book";
+  display: block;
+  margin-top: 40px; }
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none; }
+  .modal .window {
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .modal:target {
+    display: block; }
+  .modal .tasklist-title {
+    display: block; }
+
+.sin-resultados {
+  height: calc(100vh - 250px);
+  padding: 65px; }
+  .sin-resultados .icono {
+    height: 50%;
+    opacity: 0.3;
+    margin: 0 auto;
+    display: block; }
+  .sin-resultados .copy {
+    margin: 20px auto;
+    text-align: center;
+    color: #9e9b9b;
+    font-size: 17px; }
+    .sin-resultados .copy a {
+      color: #9e9b9b;
+      font-family: "proxima_nova_bold"; }
+
+body.trafico {
+  padding: 50px; }
+
+#trafico {
+  position: relative;
+  margin-top: 186px;
+  width: 100%; }
+  #trafico .row {
+    display: grid; }
+    #trafico .row.row-0 {
+      grid-template-columns: repeat(9, 1fr); }
+      #trafico .row.row-0 > .column {
+        border-right: 1px solid #f1f1f1;
+        border-top: 1px solid #f1f1f1; }
+        #trafico .row.row-0 > .column:first-child {
+          border-left: 1px solid #f1f1f1; }
+    #trafico .row.row-a {
+      grid-template-columns: 1fr 8fr; }
+      #trafico .row.row-a > .column.title {
+        border-left: 1px solid #f1f1f1;
+        border-bottom: 1px solid #f1f1f1; }
+        #trafico .row.row-a > .column.title > span {
+          word-break: break-all; }
+    #trafico .row.row-b {
+      grid-template-columns: 1fr 7fr; }
+      #trafico .row.row-b > .column.title {
+        border-left: 1px solid #f1f1f1;
+        border-bottom: 1px solid #f1f1f1; }
+        #trafico .row.row-b > .column.title > span {
+          color: #7f7d7d; }
+    #trafico .row.row-b-2 {
+      grid-template-columns: 8fr;
+      border-right: 1px solid #f1f1f1;
+      border-left: 1px solid #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+      padding: 20px 10px;
+      background-color: #4dad73; }
+      #trafico .row.row-b-2.dos-semanas {
+        background-color: #f1bc26; }
+      #trafico .row.row-b-2.ultima-semana {
+        background-color: #dc4005; }
+      #trafico .row.row-b-2.vacio {
+        padding: 10px 10px;
+        background-color: #dedede; }
+      #trafico .row.row-b-2 span {
+        font-family: "proxima_nova_bold";
+        color: white;
+        display: inline-block; }
+    #trafico .row.row-c {
+      grid-template-columns: repeat(7, 1fr); }
+      #trafico .row.row-c > .column {
+        border-bottom: 1px solid #f1f1f1;
+        border-right: 1px solid #f1f1f1; }
+        #trafico .row.row-c > .column.title {
+          border-left: 1px solid #f1f1f1; }
+          #trafico .row.row-c > .column.title > span {
+            color: #7f7d7d;
+            font-style: italic;
+            font-family: "proxima_nova_light"; }
+    #trafico .row.week-labels {
+      position: fixed;
+      width: calc(100% - 100px);
+      left: 50px;
+      top: 186px;
+      background-color: white;
+      z-index: 1;
+      border-bottom: 1px solid #f1f1f1; }
+      #trafico .row.week-labels .column {
+        text-decoration: none; }
+        #trafico .row.week-labels .column.day-label span {
+          color: #2b6bce; }
+        #trafico .row.week-labels .column.today {
+          background-color: #00adff; }
+          #trafico .row.week-labels .column.today span {
+            color: white; }
+        #trafico .row.week-labels .column span {
+          text-align: center;
+          font-family: "axiforma_book";
+          color: #ABABAD;
+          white-space: nowrap;
+          font-size: 14px; }
+        #trafico .row.week-labels .column:last-child {
+          background-color: #eee;
+          transition: all ease-in-out 0.2s; }
+          #trafico .row.week-labels .column:last-child:hover {
+            background-color: #909090; }
+            #trafico .row.week-labels .column:last-child:hover span {
+              color: white; }
+    #trafico .row.task {
+      display: block;
+      text-decoration: none;
+      height: 50px;
+      padding: 7px;
+      border-right: 1px solid white; }
+      #trafico .row.task:not(:last-child) {
+        border-bottom: 1px solid white; }
+      #trafico .row.task span {
+        font-size: 13px;
+        line-height: 1;
+        display: block;
+        opacity: 0.7; }
+      #trafico .row.task.dia-entrega .bg {
+        opacity: 1; }
+      #trafico .row.task.dia-entrega span {
+        opacity: 1; }
+      #trafico .row.task.atrasada {
+        border: 2px solid tomato; }
+        #trafico .row.task.atrasada span {
+          color: #bb1010;
+          opacity: 1; }
+      #trafico .row.task .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all ease-in-out 0.2s;
+        opacity: 0.3; }
+  #trafico .column {
+    padding: 5px 10px; }
+    #trafico .column.title span {
+      font-family: "proxima_nova_bold";
+      font-size: 15px; }
+    #trafico .column.content, #trafico .column.day {
+      padding: 0; }
+    #trafico .column .titulo-hito {
+      text-transform: uppercase; }
+
+#hitos {
+  grid-template-columns: repeat(13, 1fr);
+  display: grid;
+  height: 100vh; }
+  #hitos .milestones {
+    border-right: 1px solid #f1f1f1; }
+  #hitos .titulo-milestone {
+    white-space: nowrap;
+    height: 30px;
+    display: block;
+    padding: 7px 15px;
+    border-bottom: 1px solid #f1f1f1; }
+  #hitos .etiqueta {
+    padding: 7px 15px;
+    display: block;
+    border-bottom: 1px solid #f1f1f1; }
+  #hitos .month {
+    border-right: 2px solid #cccaca; }
+    #hitos .month .dias {
+      display: grid;
+      height: calc(100% - 39px); }
+      #hitos .month .dias .dia {
+        height: 100%;
+        width: 10px; }
+        #hitos .month .dias .dia .cuadrado {
+          height: 30px;
+          width: 100%;
+          border-left: 1px solid white;
+          border-bottom: 1px solid #f1f1f1;
+          display: block; }
+          #hitos .month .dias .dia .cuadrado.active {
+            background-color: #00adff; }
+          #hitos .month .dias .dia .cuadrado.entrega {
+            background-color: red; }
+        #hitos .month .dias .dia.hoy:after {
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 100%;
+          left: 4px;
+          top: 0;
+          background: #e8cc5b; }
+        #hitos .month .dias .dia.marcasemana {
+          border-left: 1px solid #f1f1f1; }
+        #hitos .month .dias .dia.findesemana {
+          background-color: #f1f1f1; }
+          #hitos .month .dias .dia.findesemana .cuadrado {
+            border-left: 1px solid #f1f1f1; }
+
+/*# sourceMappingURL=color.css.map */

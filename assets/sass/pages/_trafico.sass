@@ -1,0 +1,127 @@
+body.trafico
+  padding: 50px
+#trafico
+  position: relative
+  margin-top: 186px
+  width: 100%
+  .row
+    display: grid
+    &.row-0
+      grid-template-columns: repeat(9, 1fr)
+      > .column
+        border-right: 1px solid $borderGrid
+        border-top: 1px solid $borderGrid
+        &:first-child
+          border-left: 1px solid $borderGrid
+    &.row-a
+      grid-template-columns: 1fr 8fr
+      > .column
+        &.title
+          border-left: 1px solid $borderGrid
+          border-bottom: 1px solid $borderGrid
+          > span
+            word-break: break-all
+    &.row-b
+      grid-template-columns: 1fr 7fr
+      > .column
+        &.title
+          border-left: 1px solid $borderGrid
+          border-bottom: 1px solid $borderGrid
+          > span
+            color: #7f7d7d
+    &.row-b-2
+      grid-template-columns: 8fr
+      border-right: 1px solid $borderGrid
+      border-left: 1px solid $borderGrid
+      border-bottom: 1px solid $borderGrid
+      padding: 20px 10px
+      background-color: #00adff
+      &.esta-semana
+        background-color: #ff8d00
+      span
+        font-family: 'proxima_nova_bold'
+        color: white
+        display: inline-block
+    &.row-c
+      grid-template-columns: repeat(7, 1fr)
+      > .column
+        border-bottom: 1px solid $borderGrid
+        border-right: 1px solid $borderGrid
+        &.title
+          border-left: 1px solid $borderGrid
+          > span
+            color: #7f7d7d
+            font-style: italic
+            font-family: 'proxima_nova_light'
+    &.week-labels
+      position: fixed
+      width: calc(100% - 100px)
+      left: 50px
+      top: 186px
+      background-color: white
+      z-index: 1
+      border-bottom: 1px solid $borderGrid
+      .column
+        text-decoration: none
+        &.day-label 
+          span
+            color: #2b6bce
+        &.today
+          background-color: #00adff
+          span
+            color: white
+        span
+          text-align: center
+          font-family: "axiforma_book"
+          color: #ABABAD
+          white-space: nowrap
+          font-size: 14px
+        &:last-child
+          background-color: #eee
+          transition: all ease-in-out 0.2s
+          &:hover
+            background-color: #909090
+            span
+              color: white
+    &.task
+      display: block
+      text-decoration: none
+      height: 50px
+      padding: 7px
+      border-right: 1px solid white 
+      &:not(:last-child)
+        border-bottom: 1px solid white
+      span
+        font-size: 13px
+        line-height: 1
+        display: block
+        opacity: 0.7
+      &.dia-entrega 
+        .bg
+          opacity: 1
+        span
+          opacity: 1
+      &.atrasada
+        border: 2px solid tomato
+        span
+          color: #bb1010
+          opacity: 1
+      .bg
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all ease-in-out 0.2s
+        opacity: 0.3
+  .column
+    padding: 5px 10px
+    &.title
+      span
+        font-family: 'proxima_nova_bold'
+        font-size: 15px
+    &.content, &.day
+      padding: 0
+    .titulo-hito
+      text-transform: uppercase

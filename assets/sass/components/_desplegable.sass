@@ -1,0 +1,85 @@
+.desplegable
+  position: fixed
+  padding-top: 53px
+  top: 0
+  left: 0
+  width: 100%
+  padding-bottom: 35px
+  background-color: white
+  z-index: 1
+  text-align: center
+  & > *
+    display: inline-block
+    vertical-align: middle
+  .convenciones
+    padding: 5px 6px 6px
+    border-radius: 7px
+    border: 1px solid #eee
+    position: relative
+    .label
+      position: absolute
+      top: -14px
+      left: 4
+      color: #969696
+    & > *
+      display: inline-block
+      vertical-align: middle
+      font-size: 10px
+      margin-left: 5px
+      text-decoration: none
+      position: relative
+      &:hover 
+        opacity: 0.2
+        .nombre
+          opacity: 1          
+    .active
+      &:after
+        content: ""
+        width: 15px
+        height: 2px
+        background-color: #00adff
+        position: absolute
+        left: 18px
+        bottom: -2px
+      .marca
+        border: 2px solid #00adff
+    .marca
+      display: inline-block
+      vertical-align: middle
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      border: 1px solid #9c9c9c
+    span
+      padding-left: 3px
+      top: 1px
+      position: relative
+      transition: all ease-in-out 0.2s
+    .nombre
+      background-color: white
+      padding: 3px 5px 0
+      border-radius: 3px
+      pointer-events: none
+      top: -3px
+      left: 50%
+      transform: translateX(-50%)
+      position: absolute
+      border: 1px solid #9c9c9c
+      z-index: 1
+      opacity: 0
+      transition: all ease-in-out 0.2s
+      opacity: 0
+      white-space: nowrap
+
+.desplegable .btn
+  margin-left: 30px
+  padding: 5px 20px
+  color: white
+  font-family: 'proxima_nova_bold'
+  text-decoration: none
+
+.desplegable .btn.cambiar-semana
+  background-color: #088bca
+
+.desplegable .btn.actualizar
+  color: #00adff
